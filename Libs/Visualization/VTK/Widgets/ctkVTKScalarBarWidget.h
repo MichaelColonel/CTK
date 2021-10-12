@@ -37,6 +37,7 @@ class CTK_VISUALIZATION_VTK_WIDGETS_EXPORT ctkVTKScalarBarWidget : public QWidge
 {
   Q_OBJECT;
   QVTK_OBJECT;
+  Q_PROPERTY(bool showDisplayCheckBox READ isDisplayCheckBoxVisible WRITE setDisplayCheckBoxVisible);
 
 public:
   /// Constructors
@@ -52,6 +53,9 @@ public:
   int numberOfLabels()const;
   QString title()const;
   QString labelsFormat()const;
+
+  void setDisplayCheckBoxVisible(bool visible);
+  bool isDisplayCheckBoxVisible()const;
 
 public Q_SLOTS:
   void setScalarBarWidget(vtkScalarBarWidget* scalarBar);

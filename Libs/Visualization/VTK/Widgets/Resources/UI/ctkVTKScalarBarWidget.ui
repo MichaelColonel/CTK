@@ -13,8 +13,20 @@
   <property name="windowTitle">
    <string>vtkScalarBarWidget</string>
   </property>
+  <property name="setDisplayCheckBox" stdset="0">
+   <bool>false</bool>
+  </property>
   <layout class="QGridLayout" name="gridLayout_3">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <item row="0" column="0" colspan="2">

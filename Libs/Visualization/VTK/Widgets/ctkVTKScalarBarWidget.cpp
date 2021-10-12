@@ -192,6 +192,20 @@ void ctkVTKScalarBarWidget::setDisplay(bool visible)
 }
 
 //-----------------------------------------------------------------------------
+void ctkVTKScalarBarWidget::setDisplayCheckBoxVisible(bool visible)
+{
+  Q_D(ctkVTKScalarBarWidget);
+  d->DisplayScalarBarCheckBox->setVisible(visible);
+}
+
+//-----------------------------------------------------------------------------
+bool ctkVTKScalarBarWidget::isDisplayCheckBoxVisible()const
+{
+  Q_D(const ctkVTKScalarBarWidget);
+  return d->DisplayScalarBarCheckBox->isVisibleTo(const_cast<ctkVTKScalarBarWidget*>(this));
+}
+
+//-----------------------------------------------------------------------------
 bool ctkVTKScalarBarWidget::display()const
 {
   Q_D(const ctkVTKScalarBarWidget);
