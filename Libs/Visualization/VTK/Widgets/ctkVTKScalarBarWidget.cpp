@@ -171,6 +171,34 @@ vtkScalarBarWidget* ctkVTKScalarBarWidget::scalarBarWidget()const
 }
 
 //-----------------------------------------------------------------------------
+ctkVTKTextPropertyWidget* ctkVTKScalarBarWidget::getTitleTextPropertyWidget() const
+{
+  Q_D(const ctkVTKScalarBarWidget);
+  return d->TitleTextPropertyWidget;
+}
+
+//-----------------------------------------------------------------------------
+ctkVTKTextPropertyWidget* ctkVTKScalarBarWidget::getLabelsTextPropertyWidget() const
+{
+  Q_D(const ctkVTKScalarBarWidget);
+  return d->LabelsTextPropertyWidget;
+}
+
+//-----------------------------------------------------------------------------
+QSpinBox* ctkVTKScalarBarWidget::getMaximumNumberOfColorsWidget() const
+{
+  Q_D(const ctkVTKScalarBarWidget);
+  return d->MaxNumberOfColorsSpinBox;
+}
+
+//-----------------------------------------------------------------------------
+QSpinBox* ctkVTKScalarBarWidget::getNumberOfLabelsWidget() const
+{
+  Q_D(const ctkVTKScalarBarWidget);
+  return d->NumberOfLabelsSpinBox;
+}
+
+//-----------------------------------------------------------------------------
 void ctkVTKScalarBarWidget::onScalarBarModified()
 {
   Q_D(ctkVTKScalarBarWidget);

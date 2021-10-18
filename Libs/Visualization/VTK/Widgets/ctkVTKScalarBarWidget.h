@@ -30,7 +30,10 @@
 #include "ctkVTKObject.h"
 
 class ctkVTKScalarBarWidgetPrivate;
+class ctkVTKTextPropertyWidget;
 class vtkScalarBarWidget;
+
+class QSpinBox;
 
 /// \ingroup Visualization_VTK_Widgets
 class CTK_VISUALIZATION_VTK_WIDGETS_EXPORT ctkVTKScalarBarWidget : public QWidget
@@ -56,6 +59,12 @@ public:
 
   void setDisplayCheckBoxVisible(bool visible);
   bool isDisplayCheckBoxVisible()const;
+
+  // Get underlaying widgets to control them directly without VTK actor and widget 
+  ctkVTKTextPropertyWidget* getTitleTextPropertyWidget() const;
+  ctkVTKTextPropertyWidget* getLabelsTextPropertyWidget() const;
+  QSpinBox* getMaximumNumberOfColorsWidget() const;
+  QSpinBox* getNumberOfLabelsWidget() const;
 
 public Q_SLOTS:
   void setScalarBarWidget(vtkScalarBarWidget* scalarBar);
